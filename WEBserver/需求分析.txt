@@ -1,0 +1,32 @@
+功能：
+【1】 接收客户端（浏览器）请求
+【2】 解析客户端发送的请求
+【3】 根据请求组织数据内容
+【4】 将数据内容形成http响应格式返回给浏览器
+
+要求：
+【1】 采用IO并发，可以满足多个客户端同时发起请求情况
+【2】 通过类接口形式进行功能封装
+【3】 做基本的请求解析，根据具体请求返回具体内容，同时可以满足客户端的网页效果加载
+
+
+ 1.搭建IO网络并发服务模型
+ 2.将功能插入到模型中
+ 3.封装
+
+ connect from> ('127.0.0.1', 53712)
+GET / HTTP/1.1
+Host: 127.0.0.1:8889
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.116 Safari/537.36
+Sec-Fetch-Dest: document
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+
+
+connect from> ('127.0.0.1', 53714)
